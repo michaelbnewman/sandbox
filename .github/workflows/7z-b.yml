@@ -1,0 +1,30 @@
+name: Generate 7z Benchmark PR
+
+on:
+  workflow_dispatch:
+
+jobs:
+  run-benchmark:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Set datetime
+        run: echo "DATETIME=$(date +'%Y%m%d_%H%M%S')" >> $GITHUB_ENV
+
+      - name: Run 7-Zip Benchmark
+        run: |
+          mkdir -p "results_${{ env.DATETIME }}"
+          7z b > "results_${{ env.DATETIME }}/benchmark.txt"
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v8
+        with:
+          commit-message: Add benchmark results for ${{ env.DATETIME }}
+          branch: auto-benchmark/${{ env.DATETIME }}
+          title: "Automated 7z Benchmark Results - ${{ env.DATETIME }}"
+          body: "Automated benchmark output."

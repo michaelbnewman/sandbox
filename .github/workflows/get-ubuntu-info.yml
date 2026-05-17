@@ -1,0 +1,63 @@
+name: Get Ubuntu Info
+
+on:
+  workflow_dispatch:
+
+jobs:
+  get-os-info:
+    runs-on: ubuntu-latest
+    steps:
+      - name: uname -a
+        run: uname -a
+      - name: lsb_release -a
+        run: lsb_release -a
+      - name: cat /etc/os-release
+        run: cat /etc/os-release
+  get-user-info:
+    runs-on: ubuntu-latest
+    steps:
+      - name: whoami
+        run: whoami
+      - name: id
+        run: id
+      - name: groups
+        run: groups
+  get-disk-info:
+    runs-on: ubuntu-latest
+    steps:
+      - name: df -h
+        run: df -h
+      - name: lsblk
+        run: lsblk
+      - name: fdisk -l
+        run: sudo fdisk -l
+  get-memory-info:
+    runs-on: ubuntu-latest
+    steps:
+      - name: free -h
+        run: free -h
+  get-cpu-info:
+    runs-on: ubuntu-latest
+    steps:
+      - name: lscpu
+        run: lscpu
+      - name: cat /proc/cpuinfo
+        run: cat /proc/cpuinfo
+  get-network-info:
+    runs-on: ubuntu-latest
+    steps:
+      - name: ip addr
+        run: ip addr
+      - name: ip route
+        run: ip route
+  get-binary-info:
+    runs-on: ubuntu-latest
+    steps:
+      - name: which bash
+        run: which bash
+      - name: which python3
+        run: which python3
+      - name: which git
+        run: which git
+      - name: ls -l /usr/bin
+        run: ls -l /usr/bin

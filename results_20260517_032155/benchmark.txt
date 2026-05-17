@@ -1,0 +1,26 @@
+
+7-Zip 23.01 (x64) : Copyright (c) 1999-2023 Igor Pavlov : 2023-06-20
+ 64-bit locale=C.UTF-8 Threads:4 OPEN_MAX:65536
+
+Compiler: 13.2.0 GCC 13.2.0: SSE2
+Linux : 6.17.0-1013-azure : #13~24.04.1-Ubuntu SMP Wed Apr 15 16:52:17 UTC 2026 : x86_64 : Microsoft Hv : Hv#1 : 10.0.26102.1.0.1277
+PageSize:4KB THP:always hwcap:2 hwcap2:2
+AMD EPYC 9V74 80-Core Processor (A10F11) 
+
+1T CPU Freq (MHz):  2840  2847  2839  2841  2829  2833  2840
+2T CPU Freq (MHz): 201% 2818   199% 2835  
+
+RAM size:   15989 MB,  # CPU hardware threads:   4
+RAM usage:    889 MB,  # Benchmark threads:      4
+
+                       Compressing  |                  Decompressing
+Dict     Speed Usage    R/U Rating  |      Speed Usage    R/U Rating
+         KiB/s     %   MIPS   MIPS  |      KiB/s     %   MIPS   MIPS
+
+22:      17634   372   4607  17155  |     141034   397   3028  12032
+23:      17467   382   4660  17797  |     137925   397   3008  11934
+24:      16917   381   4773  18189  |     132747   391   2980  11650
+25:      16827   380   5055  19213  |     133143   398   2976  11850
+----------------------------------  | ------------------------------
+Avr:     17211   379   4774  18089  |     136212   396   2998  11866
+Tot:             387   3886  14977

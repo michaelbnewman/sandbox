@@ -1,0 +1,26 @@
+
+7-Zip 23.01 (x64) : Copyright (c) 1999-2023 Igor Pavlov : 2023-06-20
+ 64-bit locale=C.UTF-8 Threads:4 OPEN_MAX:65536
+
+Compiler: 13.2.0 GCC 13.2.0: SSE2
+Linux : 6.17.0-1013-azure : #13~24.04.1-Ubuntu SMP Wed Apr 15 16:52:17 UTC 2026 : x86_64 : Microsoft Hv : Hv#1 : 10.0.26102.1.0.1277
+PageSize:4KB THP:always hwcap:2 hwcap2:2
+AMD EPYC 7763 64-Core Processor (A00F11) 
+
+1T CPU Freq (MHz):  3203  3215  3211  3216  3208  3202  3209
+2T CPU Freq (MHz): 197% 3207   200% 3198  
+
+RAM size:   15989 MB,  # CPU hardware threads:   4
+RAM usage:    889 MB,  # Benchmark threads:      4
+
+                       Compressing  |                  Decompressing
+Dict     Speed Usage    R/U Rating  |      Speed Usage    R/U Rating
+         KiB/s     %   MIPS   MIPS  |      KiB/s     %   MIPS   MIPS
+
+22:      18958   357   5166  18443  |     152486   390   3332  13009
+23:      18702   372   5129  19055  |     153425   398   3339  13276
+24:      18255   375   5240  19628  |     151128   399   3327  13263
+25:      17790   373   5441  20313  |     148542   398   3322  13220
+----------------------------------  | ------------------------------
+Avr:     18426   369   5244  19360  |     151395   396   3330  13192
+Tot:             383   4287  16276

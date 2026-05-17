@@ -24,6 +24,7 @@ jobs:
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v8
         with:
+          sign-commits: true
           commit-message: Add benchmark results for ${{ env.DATETIME }}
           branch: auto-benchmark/${{ env.DATETIME }}
           title: "Automated 7z Benchmark Results - ${{ env.DATETIME }}"
